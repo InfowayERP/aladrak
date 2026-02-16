@@ -1,0 +1,163 @@
+/* === Custom Streamlit Styles === */
+
+html, body, [class*="css"] {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Remove top, bottom, and left padding from main container */
+.block-container {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+/* Reduce margin for h1 and h2 */
+h1, h2 {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    background: rgb(226, 252, 231);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Reduce header height */
+header[data-testid="stHeader"] {
+    height: 0rem !important;
+    min-height: 0rem !important;
+}
+
+/* Tabs box shadow */
+.stTabs [role="tablist"] {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;  /* optional: smooth edges */
+    background: rgb(226, 252, 231);   /* optional: white background */
+    padding: 6px;        /* optional: inner spacing */
+}
+
+.stTabs [role="tab"] {
+    color: green !important;     /* green text */
+    font-weight: bold !important; /* bold */
+    padding: 0px;
+}
+
+[data-baseweb="tab-list"] {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.stPlotlyChart {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 0px;
+    background: rgb(226, 252, 231);
+    width: 100% !important;      /* Force chart to fit container */
+    max-width: 100% !important;  /* prevent overflow */
+    box-sizing: border-box;      /* Includes padding inside width */  
+}
+
+.css-1y4p8pa {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+[data-testid="stSidebar"] {
+    background-color: rgb(226, 252, 231);;  /* Replace with your color */
+}
+
+/* Optional: change text color inside sidebar */
+[data-testid="stSidebar"] * {
+    color: rgb(255, 255, 255);
+}
+
+/* Sidebar width when visible */
+[data-testid="stSidebar"][aria-expanded="true"] {
+    min-width: 180px !important;
+    max-width: 180px !important;
+}
+
+/* When sidebar is hidden, let main container take full width */
+[data-testid="stSidebar"][aria-expanded="false"] {
+    display: none !important;
+}
+
+
+/*Metrics Style*/
+
+[data-testid="stMetric"] {
+    background-color: rgb(226, 252, 231);  /* light green background */
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+    display: flex;              /* enable flexbox */
+    flex-direction: column;     /* stack label + value vertically */
+    align-items: center;        /* center horizontally */
+    justify-content: center;    /* center vertically */
+    text-align: center;         /* align text */
+}
+
+/* Label (e.g., "LPO Amount") */
+[data-testid="stMetric"] label {
+    color: green !important;
+    font-weight: 600;
+    text-align: center;
+}
+/* Value (big number) */
+[data-testid="stMetricValue"] {
+    color: green !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Delta (arrow + percentage change) */
+[data-testid="stMetricDelta"] {
+    color: green !important;
+    font-weight: 600;
+}
+
+
+/*Expander*/
+
+.streamlit-expanderHeader {
+    background-color: rgb(226, 252, 231) !important;  /* light green */
+    color: green !important;                         /* header text color */
+    font-weight: 600;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Expander body content */
+.streamlit-expanderContent {
+    background-color: rgb(226, 252, 231) !important;
+    color: green !important;
+    border-radius: 0 0 8px 8px !important;
+    padding: 10px !important;
+}
+
+label { color: #333333 !important; font-weight: bold; font-size: 14px; }
+
+.stButton > button {
+    width: 100%; 
+    background: darkgreen !important; 
+    color: white !important;
+    height: 45px; 
+    font-size: 16px; 
+    border-radius: 10px;
+    border: none; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.stButton > button:hover {
+    background: #004d00 !important; /* Slightly darker green */
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.stForm {
+    /*padding-top: 40px;   /* adjust value as needed */
+    margin-top: 20px;
+}

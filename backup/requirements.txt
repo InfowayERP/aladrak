@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+streamlit
+pandas
+=======
+streamlit
+pandas
+>>>>>>> 2eb273f (Initial full sync from VS Code)
+plotly
